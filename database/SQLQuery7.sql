@@ -1,0 +1,28 @@
+--CREATE PROCEDURE Apartments_GetAll
+--(
+--    @Search NVARCHAR(100) = NULL
+--)
+--AS
+--BEGIN
+--    SELECT
+--        A.Id,
+--        A.Title,
+--        A.Price,
+--        A.Rooms,
+--        A.City,
+--        A.Address,
+--        S.Name      AS StatusName,
+--        AG.FullName AS AgentName,
+--        A.CreatedAt
+--    FROM Apartments A
+--    JOIN ApartmentStatuses S ON A.StatusId = S.Id
+--    JOIN Agents AG ON A.AgentId = AG.Id
+--    WHERE
+--        @Search IS NULL
+--        OR A.Title LIKE N'%' + @Search + N'%'
+--        OR A.City  LIKE N'%' + @Search + N'%'
+--        OR A.Address LIKE N'%' + @Search + N'%'
+--    ORDER BY A.CreatedAt DESC;
+--END
+
+EXEC Apartments_GetAll;

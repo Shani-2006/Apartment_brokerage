@@ -1,0 +1,26 @@
+--CREATE PROCEDURE Apartments_GetById
+--(
+--    @Id INT
+--)
+--AS
+--BEGIN
+--    SELECT
+--        A.Id,
+--        A.Title,
+--        A.Description,
+--        A.Price,
+--        A.Rooms,
+--        A.City,
+--        A.Address,
+--        S.Name     AS StatusName,
+--        AG.FullName AS AgentName,
+--        AG.Phone,
+--        AG.Email,
+--        A.CreatedAt
+--    FROM Apartments A
+--    JOIN ApartmentStatuses S ON A.StatusId = S.Id
+--    JOIN Agents AG ON A.AgentId = AG.Id
+--    WHERE A.Id = @Id;
+--END
+
+EXEC Apartments_GetById 1;
